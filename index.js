@@ -1,10 +1,14 @@
-// Import stylesheets
 import './style.css';
-import Binding from './binding.js'
+import Bind from './libraries/binding/bind.js'
 
-// Write Javascript code!
-const appDiv = document.getElementById('app');
-appDiv.innerHTML = `<h1>JS Starter</h1>`;
+class app {
 
-const binding = new Binding();
-binding.init();
+    main(){
+        const binding = new Bind();
+        binding.init();
+    }
+
+}
+module.export = app;
+
+main();
