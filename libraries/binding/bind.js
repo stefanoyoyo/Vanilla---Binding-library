@@ -1,10 +1,25 @@
-import DOMHelper from './libraries/binding/helpers/DOMHelper.js';
+import DOMHelper from 'libraries/binding/helpers/DOMHelpers.js';
 
 class Bind {
   init() {
-    const all = document.getElementsByTagName('*');
-    console.log('all');
-    console.log(all);
+    const rawNodes = document.getElementsByTagName('*');
+    // const rawNodes = DOMHelper.getAllNodesFrom('app');
+    const nodes = this.getNodesInfo(rawNodes);
+    console.log('nodes');
+    console.log(nodes);
+  }
+
+  getNodesInfo(rawNodes) {
+    if (rawNodes == null) return rawNodes;
+    const nodes = [];
+    for(const rawNode of rawNodes) {
+      nodes.push({
+        id : rawNode.id,
+        type : rawNode.tagName
+      });
+    }
+
+    return nodes;
   }
 }
 
