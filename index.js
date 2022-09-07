@@ -7,4 +7,5 @@ const nodesWithId = nodes.filter(row => row.id !== '');
 console.log('nodesWithId');
 console.log(nodesWithId); 
 const state = binding.buildState(nodesWithId);
-console.log(state)
+console.log(state);
+// ORA PER OGNI NODO (IN NODES) applico un evento per bindare state con l'elemento sulla DOM
