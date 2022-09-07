@@ -1,9 +1,8 @@
-import DOMHelper from 'libraries/binding/helpers/DOMHelpers.js';
+import DOMHelper from './helpers/DOMHelper.js';
 
 class Bind {
   init() {
-    const rawNodes = document.getElementsByTagName('*');
-    // const rawNodes = DOMHelper.getAllNodesFrom('app');
+    const rawNodes = DOMHelper.getAllNodesInDOM();
     const nodes = this.getNodesInfo(rawNodes);
     console.log('nodes');
     console.log(nodes);
