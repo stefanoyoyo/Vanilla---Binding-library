@@ -1,25 +1,31 @@
 import DOMHelper from './helpers/DOMHelper.js';
 
 class Bind {
+
+  /**Method getting nodes info from DOM */
   init() {
     const rawNodes = DOMHelper.getAllNodesInDOM();
-    const nodes = this.getNodesInfo(rawNodes);
-    console.log('nodes');
-    console.log(nodes);
-  }
-
-  getNodesInfo(rawNodes) {
-    if (rawNodes == null) return rawNodes;
-    const nodes = [];
-    for(const rawNode of rawNodes) {
-      nodes.push({
-        id : rawNode.id,
-        type : rawNode.tagName
-      });
-    }
+    const nodes = DOMHelper.getNodesInfo(rawNodes);
 
     return nodes;
   }
+
+  /**Method building the state variable including
+   *  all the fields in binding with the specified 
+   * elements in DOM.
+   * @nodes info about DOM's nodes
+   */
+  buildState(nodes) {
+    if (nodes == null) return {};
+    const state = {};
+    for(const node of nodes) {
+      state[node.id] = ''; 
+    }
+
+    return state; 
+  }
+
+
 }
 
 module.exports = Bind;
