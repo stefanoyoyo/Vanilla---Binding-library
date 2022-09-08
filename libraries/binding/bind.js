@@ -25,6 +25,23 @@ class Bind {
     return state; 
   }
 
+  /**Method using events to bind state fields with associared node. */
+  associateStateAndNodeUsingEvents(nodesInfo, state) {
+    if (nodesInfo == null) return; 
+    if (state == null) return; 
+
+    for (const nodeInfo of nodesInfo) {
+      this.bindNodeWithStateField(nodeInfo, state);
+    }
+
+  }
+
+  /**Method binding  anode with its assocoated state field */
+  bindNodeWithStateField(nodeInfo, state) {
+    if (nodeInfo == null) return; 
+    if (state == null) return; 
+    return;
+  }
 
 }
 

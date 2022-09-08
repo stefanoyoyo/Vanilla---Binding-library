@@ -1,11 +1,12 @@
 import './style.css';
 import Bind from './libraries/binding/bind.js'
 
-const binding = new Bind();
-const nodes = binding.init();
-const nodesWithId = nodes.filter(row => row.id !== '');
-console.log('nodesWithId');
-console.log(nodesWithId); 
-const state = binding.buildState(nodesWithId);
+const binder = new Bind();
+const nodes = binder.init();
+const nodesInfo = nodes.filter(row => row.id !== '');
+console.log('nodesInfo');
+console.log(nodesInfo); 
+const state = binder.buildState(nodesInfo);
 console.log(state);
 // ORA PER OGNI NODO (IN NODES) applico un evento per bindare state con l'elemento sulla DOM
+binder.associateStateAndNodeUsingEvents(nodesInfo, state)
