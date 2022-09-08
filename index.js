@@ -12,7 +12,7 @@ console.log(state);
 // per bindare state con l'elemento sulla DOM
 binder.associateStateAndNodeUsingEvents(nodesInfo, state); 
 
-setInterval(() => {
-  console.log('state')
-  console.log(state)
-}, 5000)
+// setInterval(() => {
+//   console.log('state')
+//   console.log(state)
+// }, 5000)
