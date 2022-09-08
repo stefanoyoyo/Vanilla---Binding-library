@@ -19,7 +19,16 @@ class Bind {
     if (nodes == null) return {};
     const state = {};
     for(const node of nodes) {
-      state[node.id] = ''; 
+      state[node.id] = {
+        get: function() {
+          console.log('Getter called');
+          return this.value;
+        },
+        set: function(value) {
+          console.log('Setter called');
+          this.value = value;
+        }
+      }; 
     }
 
     return state; 
