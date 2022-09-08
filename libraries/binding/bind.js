@@ -66,8 +66,6 @@ class Bind {
     const inputNode = document.getElementById(nodeInfo.id);
     inputNode.addEventListener('keyup', (event) => {
       state[nodeInfo.id] = event.target.value;
-      console.log('state[nodeInfo.id]');
-      console.log(state[nodeInfo.id]);
     });
   }
 
