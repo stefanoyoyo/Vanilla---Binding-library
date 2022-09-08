@@ -8,5 +8,11 @@ console.log('nodesInfo');
 console.log(nodesInfo); 
 const state = binder.buildState(nodesInfo);
 console.log(state);
-// ORA PER OGNI NODO (IN NODES) applico un evento per bindare state con l'elemento sulla DOM
-binder.associateStateAndNodeUsingEvents(nodesInfo, state)
+// ORA PER OGNI NODO (IN NODES) applico un evento 
+// per bindare state con l'elemento sulla DOM
+binder.associateStateAndNodeUsingEvents(nodesInfo, state); 
+
+setInterval(() => {
+  console.log('state')
+  console.log(state)
+}, 5000)
