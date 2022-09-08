@@ -25,6 +25,8 @@ class Bind {
     return state; 
   }
 
+  // #region bind nodes and state using events
+
   /**Method using events to bind state fields with associared node. */
   associateStateAndNodeUsingEvents(nodesInfo, state) {
     if (nodesInfo == null) return; 
@@ -40,9 +42,11 @@ class Bind {
   bindNodeWithStateField(nodeInfo, state) {
     if (nodeInfo == null) return; 
     if (state == null) return; 
+
     return;
   }
 
+  // #endregion
 }
 
 module.exports = Bind;
