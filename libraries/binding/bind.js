@@ -65,7 +65,12 @@ class Bind {
   bindInputWithStateField(nodeInfo, state) {
     if (nodeInfo == null) return; 
     if (state == null) return; 
-    
+    const inputNode = document.getElementById(nodeInfo.id);
+    inputNode.addEventListener('keyup', (event) => {
+      state[node.id] = event.target.value;
+      console.log('state[node.id]')
+      console.log(state[node.id])
+    });
   }
 
   // #endregion
