@@ -14,13 +14,13 @@ class ManualBind {
    * } 
    **/
   bindStateWithNodes(state) {
-    if (this.state == null) return null;
-    console.log(this.state)
-    for (const element of this.state) {
-      const node = document.getElementById(element.nodeId); 
-      const nodes = DOMHelper.getNodesInfo([node]);
-      console.log(element.nodeId)
-      console.log(node)
+    if (state == null) return null;
+    console.log(state)
+    for (const element of state) {
+      // const node = document.getElementById(element.id); 
+      // console.log('node')
+      // console.log(node)
+      // console.log(node.nodeType )
     }
   }
 }

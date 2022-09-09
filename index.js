@@ -3,11 +3,11 @@ import Bind from './libraries/binding/bind.js'
 
 const state = [
   {
-    nodeId: 'binding-text',
+    id: 'binding-text',
     field: 'text'
   },
   {
-    nodeId: 'input-text',
+    id: 'input-text',
     field: 'text'
   }
 ]

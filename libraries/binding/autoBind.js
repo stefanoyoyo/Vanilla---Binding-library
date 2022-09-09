@@ -46,7 +46,7 @@ class AutoBind {
     if (state == null) return;
 
     for (const nodeInfo of nodesInfo) {
-      this.bindNodeWithStateField(nodeInfo, state);
+      this.commonBind.bindNodeWithStateField(nodeInfo, state);
     }
   }
 
