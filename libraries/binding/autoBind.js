@@ -19,11 +19,11 @@ class AutoBind {
     const state = {};
     for (const node of nodes) {
       state[node.id] = {
-        get: function () {
+        get: () => {
           console.log('Getter called');
           return this.value;
         },
-        set: function (value) {
+        set: (value) => {
           console.log('Setter called');
           this.value = value;
         },
