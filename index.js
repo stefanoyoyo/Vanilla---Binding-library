@@ -1,5 +1,5 @@
 import './style.css';
-import AutoBind from './libraries/binding/bind.js'
+import AutoBind from './libraries/binding/autoBind.js'
 
 const Autobinder = new AutoBind();
 const nodes = Autobinder.init();
