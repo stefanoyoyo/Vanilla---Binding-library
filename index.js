@@ -2,12 +2,18 @@ import './style.css';
 import AutoBind from './libraries/binding/autoBind.js'
 import Bind from './libraries/binding/bind.js'
 
-const state = [{
-  nodeId: 'binding-text',
-  field: 'text'
-}]
-const bind = new Bind(state);
-bind.init();
+const state = [
+  {
+    nodeId: 'binding-text',
+    field: 'text'
+  },
+  {
+    nodeId: 'input-text',
+    field: 'text'
+  }
+]
+const bind = new Bind();
+bind.init(state);
 
 // const Autobinder = new AutoBind();
 // const nodes = Autobinder.init();

@@ -1,6 +1,11 @@
 import DOMHelper from './helpers/DOMHelper.js';
 
 class AutoBind {
+
+  constructor(commonBind) {
+    this.commonBind = commonBind;
+  }
+
   /**Method getting nodes info from DOM */
   init() {
     const rawNodes = DOMHelper.getAllNodesInDOM();
@@ -43,30 +48,6 @@ class AutoBind {
     for (const nodeInfo of nodesInfo) {
       this.bindNodeWithStateField(nodeInfo, state);
     }
-  }
-
-  /**Method binding a node with its assocoated state field */
-  bindNodeWithStateField(nodeInfo, state) {
-    if (nodeInfo == null) return;
-    if (state == null) return;
-    switch (nodeInfo.type.toLowerCase()) {
-      case 'input':
-        this.bindInputWithStateField(nodeInfo, state);
-        break;
-    }
-
-    return;
-  }
-
-  /**Method binding a node of type INPUT
-   * with its assocoated state field */
-  bindInputWithStateField(nodeInfo, state) {
-    if (nodeInfo == null) return;
-    if (state == null) return;
-    const inputNode = document.getElementById(nodeInfo.id);
-    inputNode.addEventListener('keyup', (event) => {
-      state[nodeInfo.id] = event.target.value;
-    });
   }
 
   // #endregion

@@ -1,6 +1,7 @@
 class ManualBind {
-  constructor(state) {
-    this.state = state;
+  
+  constructor(commonBind) {
+    this.commonBind = commonBind;
   }
 
   /**Method binding the state's fields 
@@ -10,22 +11,15 @@ class ManualBind {
    *  p-show-age: ''
    * } 
    **/
-  bindStateWithNodes() {
+  bindStateWithNodes(state) {
     if (this.state == null) return null;
-    for (const element in state) {
+    console.log(this.state)
+    for (const element of this.state) {
       const node = document.getElementById(element.nodeId); 
-      console.log(node)
+      console.log(element.nodeId)
       console.log(node)
     }
   }
 }
 
 module.exports = ManualBind;
-
-
-// const keys = Object.keys(this.state);
-// for(const key of keys) {
-//   const node = document.getElementById(key); 
-//   console.log(node)
-//   console.log(node)
-// }
