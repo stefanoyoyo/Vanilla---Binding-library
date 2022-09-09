@@ -1,6 +1,6 @@
 import DOMHelper from './helpers/DOMHelper.js';
 
-class Bind {
+class AutoBind {
   /**Method getting nodes info from DOM */
   init() {
     const rawNodes = DOMHelper.getAllNodesInDOM();
@@ -72,4 +72,4 @@ class Bind {
   // #endregion
 }
 
-module.exports = Bind;
+module.exports = AutoBind;

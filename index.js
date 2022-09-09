@@ -1,16 +1,16 @@
 import './style.css';
-import Bind from './libraries/binding/bind.js'
+import AutoBind from './libraries/binding/bind.js'
 
-const binder = new Bind();
-const nodes = binder.init();
+const Autobinder = new AutoBind();
+const nodes = Autobinder.init();
 const nodesInfo = nodes.filter(row => row.id !== '');
 console.log('nodesInfo');
 console.log(nodesInfo); 
-const state = binder.buildState(nodesInfo);
+const state = Autobinder.buildState(nodesInfo);
 console.log(state);
 /* ORA PER OGNI NODO (IN NODES) applico un evento 
  per bindare state con l'elemento sulla DOM */
-binder.associateStateAndNodeUsingEvents(nodesInfo, state); 
+Autobinder.associateStateAndNodeUsingEvents(nodesInfo, state); 
 /* • Continuare ocn gli altri tipi di elemementi. 
    • faare in modo che si possa configurare manualmente
      quale campo di state sta in binding con quale nodo 
