@@ -12,13 +12,20 @@ class ManualBind {
    **/
   bindStateWithNodes() {
     if (this.state == null) return null;
-    const keys = Object.keys(this.state);
-    for(const key of keys) {
-      const node = document.getElementById(key); 
-      console.log('node')
+    for (const element in state) {
+      const node = document.getElementById(element.nodeId); 
+      console.log(node)
       console.log(node)
     }
   }
 }
 
 module.exports = ManualBind;
+
+
+// const keys = Object.keys(this.state);
+// for(const key of keys) {
+//   const node = document.getElementById(key); 
+//   console.log(node)
+//   console.log(node)
+// }
