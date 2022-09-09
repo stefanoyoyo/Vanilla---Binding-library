@@ -8,10 +8,17 @@ class ManualBind {
 
   /**Method binding the state's fields 
    * with the associated values.
-   * EXAMPLE: const state = {
-   *  input-age: '',
-   *  p-show-age: ''
-   * } 
+   * EXAMPLE: 
+   * const state = [
+   *   {
+   *     id: 'binding-text',
+   *     field: 'text'
+   *   },
+   *   {
+   *     id: 'input-text',
+   *     field: 'text'
+   *   }
+   * ]
    **/
   bindStateWithNodes(state) {
     if (state == null) return null;
