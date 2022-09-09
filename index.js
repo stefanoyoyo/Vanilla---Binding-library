@@ -1,5 +1,4 @@
 import './style.css';
-import AutoBind from './libraries/binding/autoBind.js'
 import Bind from './libraries/binding/bind.js'
 
 const state = [

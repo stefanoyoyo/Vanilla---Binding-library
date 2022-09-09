@@ -1,5 +1,7 @@
+import DOMHelper from './helpers/DOMHelper.js';
+
 class ManualBind {
-  
+
   constructor(commonBind) {
     this.commonBind = commonBind;
   }
@@ -16,6 +18,7 @@ class ManualBind {
     console.log(this.state)
     for (const element of this.state) {
       const node = document.getElementById(element.nodeId); 
+      const nodes = DOMHelper.getNodesInfo([node]);
       console.log(element.nodeId)
       console.log(node)
     }
